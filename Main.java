@@ -1,14 +1,17 @@
 public class Main {
     public static void main(String[] args) {
-        Automovil auto1 = new Automovil();
+        Automovil auto1 = new Automovil("bmw","I320","blanco",3.2);
         // Constructor
-        //ASIGNAR VALORES
+        /*/ASIGNAR VALORES
         auto1.marca="BMW";
         auto1.modelo="I320";
         auto1.cilindraje=3.2;
         auto1.color="Negro";
+        //*
+         */
         //desplegar valor de los objetos
-        //auto1.detalle();
+        
+        auto1.detalle();
         // CReacion de objeto de las flores
         Flores flor1 = new Flores();
         flor1.color="Rojo";
