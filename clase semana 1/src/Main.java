@@ -15,11 +15,19 @@ public class Main {
         //*
          */
         //desplegar valor de los objetos
-        
+
+
         //auto1.detalle();
         // CReacion de objeto de las flores
-        Flores flor1 = new Flores();
+        Flores flor1 = new Flores("Girasol","Verde",20,40);
+        System.out.print("Ingrese el color de la flor :");
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        flor1.color= br.readLine();
+        String cc;
+        cc=flor1.detalle(flor1.color);
+
+
+
         System.out.print("Ingrese el nombre de la flor :");
         flor1.nombre = br.readLine();
         System.out.print("Ingrese el precio de la flor :");
@@ -29,25 +37,24 @@ public class Main {
         System.out.print("Ingrese el color de la flor :");
         flor1.color= br.readLine();
 
-        flor1.nombre= JOptionPane.showInputDialog("Nombre de la flor:");
-        JOptionPane.showMessageDialog(null,"El nombre de la flor es:" +flor1.nombre);
 
 
-        Flores flor2 = new Flores();
-        flor2.color="Amarillo";
-        flor2.nombre="Girasol";
-        flor2.precio= 2.5;
-        flor2.stock= 300;
+
+
+
+
+
 
         //Salida objetos
 
         System.out.println("Producto 1");
 
-        flor1.detalle();
-
         System.out.println("Producto 2");
 
-        flor2.detalle();
+
+
+        //flor1.nombre= JOptionPane.showInputDialog("Nombre de la flor:");
+        //JOptionPane.showMessageDialog(null,"El nombre de la flor es:" +flor1.nombre);
 
 
 
