@@ -20,10 +20,10 @@ public class Automovil {
     //METDO PARA IMPRIIR
     public void detalle(){
         StringBuilder sb = new StringBuilder();
-        sb.append("auto1.marca: ").append(this.marca).append("\n");
-        sb.append("auto1.modelo: ").append(this.modelo).append("\n");
-        sb.append("auto1.color: ").append(this.color).append("\n");
-        sb.append("auto1.cilindraje: ").append(this.cilindraje);
+        sb.append("marca: ").append(this.marca).append("\n");
+        sb.append("modelo: ").append(this.modelo).append("\n");
+        sb.append("color: ").append(this.color).append("\n");
+        sb.append("cilindraje: ").append(this.cilindraje);
         System.out.println(sb.toString());
     }
 

@@ -30,7 +30,7 @@ public class Main {
             System.out.print("Ingrese el color de la flor :");
             flor1.setColor(br.readLine());
             
-            String cc = flor1.detalle(flor1.getColor());
+            flor1.detalle(flor1.getColor());
         }
 
         //Salida objetos
