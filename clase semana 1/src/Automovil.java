@@ -12,18 +12,19 @@ public class Automovil {
     public Automovil(String marca, String modelo, String color, double cilindraje) {
         this.marca = marca;
         this.modelo = modelo;
-        this.color = color="Blanco";
+        this.color = color;
         this.cilindraje = cilindraje;
     }
 
     //System.out.println("Info del metodo");
     //METDO PARA IMPRIIR
     public void detalle(){
-        String modelo ="AUDI";
-        System.out.println("auto1.marca: "+ this.marca);
-        System.out.println("auto1.modelo: "+ this.modelo);
-        System.out.println("auto1.color: "+ this.color);
-        System.out.println("auto1.cilindraje: "+ this.cilindraje);
+        StringBuilder sb = new StringBuilder();
+        sb.append("marca: ").append(this.marca).append("\n");
+        sb.append("modelo: ").append(this.modelo).append("\n");
+        sb.append("color: ").append(this.color).append("\n");
+        sb.append("cilindraje: ").append(this.cilindraje);
+        System.out.println(sb.toString());
     }
 
 }
