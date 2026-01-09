@@ -1,4 +1,3 @@
-import javax.swing.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -20,30 +19,19 @@ public class Main {
         //auto1.detalle();
         // CReacion de objeto de las flores
         Flores flor1 = new Flores("Girasol","Verde",20,40);
-        System.out.print("Ingrese el color de la flor :");
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        flor1.color= br.readLine();
-        String cc;
-        cc=flor1.detalle(flor1.color);
-
-
-
-        System.out.print("Ingrese el nombre de la flor :");
-        flor1.nombre = br.readLine();
-        System.out.print("Ingrese el precio de la flor :");
-        flor1.precio= Double.parseDouble(br.readLine());
-        System.out.print("Ingrese el stock de la flor :");
-        flor1.stock= Integer.parseInt(br.readLine());
-        System.out.print("Ingrese el color de la flor :");
-        flor1.color= br.readLine();
-
-
-
-
-
-
-
-
+        
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
+            System.out.print("Ingrese el nombre de la flor :");
+            flor1.setNombre(br.readLine());
+            System.out.print("Ingrese el precio de la flor :");
+            flor1.setPrecio(Double.parseDouble(br.readLine()));
+            System.out.print("Ingrese el stock de la flor :");
+            flor1.setStock(Integer.parseInt(br.readLine()));
+            System.out.print("Ingrese el color de la flor :");
+            flor1.setColor(br.readLine());
+            
+            String cc = flor1.detalle(flor1.getColor());
+        }
 
         //Salida objetos
 

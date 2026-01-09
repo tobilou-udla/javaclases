@@ -1,5 +1,3 @@
-import javax.swing.*;
-
 public class Proveedor {
     String RUC;
     String razonsocial;
@@ -52,9 +50,11 @@ public class Proveedor {
     //Metodos programa
 
     public String detalleProveedor(String ruc, String rs, String dir){
-        String detcom;
-        detcom="EL ruc del proveedor es:"+ruc+"\n"+ "Razon social :"+rs+"\n"+"Direccion:"+dir+"\n";
-        return detcom;
+        StringBuilder sb = new StringBuilder();
+        sb.append("EL ruc del proveedor es:").append(ruc).append("\n");
+        sb.append("Razon social :").append(rs).append("\n");
+        sb.append("Direccion:").append(dir).append("\n");
+        return sb.toString();
     }
 
 

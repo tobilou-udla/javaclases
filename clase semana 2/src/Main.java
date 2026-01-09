@@ -5,17 +5,17 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Proveedor vendor1= new Proveedor();
-        Scanner sc = new Scanner(System.in);
-        String ruc,rs,dir,dp;
-        System.out.print("Provedor RUC: ");
-        ruc=sc.nextLine();
-        System.out.print("Provedor Razon Social: ");
-        rs=sc.nextLine();
-        System.out.print("Provedor Direccion: ");
-        dir=sc.nextLine();
-        dp= vendor1.detalleProveedor(ruc,rs,dir);
-
-        System.out.println("Los datos son\n"+dp);
         
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.print("Provedor RUC: ");
+            String ruc = sc.nextLine();
+            System.out.print("Provedor Razon Social: ");
+            String rs = sc.nextLine();
+            System.out.print("Provedor Direccion: ");
+            String dir = sc.nextLine();
+            String dp = vendor1.detalleProveedor(ruc,rs,dir);
+
+            System.out.println("Los datos son\n"+dp);
+        }
     }
 }
